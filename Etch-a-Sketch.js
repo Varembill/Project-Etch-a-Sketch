@@ -1,19 +1,20 @@
+
+const container = document.querySelector('.container');
+
+
 function createGrid() {
-    const container = document.querySelector(".container");
-   
-    for (let i = 1; i < 17; i++) {
-    const newDiv = document.createElement("div");
-    
-       newDiv.textContent = "Div "+ i;
-  
-       container.appendChild(newDiv);
-       
-    
 
-
+    for (let i = 0; i < 16 ; i++) {
+        const newDiv = document.createElement("div"); // create an element div
+        newDiv.textContent = "this" + i; // set content of the div element
+        newDiv.id = "div-"+ i;
+        container.appendChild(newDiv); // append back div to container
     }
 
+
+    let a = newDiv
+    
 }
+  
+createGrid();
 
-
-createGrid() 
