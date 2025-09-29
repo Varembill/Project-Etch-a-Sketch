@@ -5,9 +5,32 @@
     font-family:Arial, Helvetica, sans-serif;
     justify-content: center;
     gap: 1em;
-    flex-wrap:wrap;
+    /* flex-wrap:wrap; */
     
 }
-.container .div {
+div {
    border: 1px solid black;
+   
+}
+
+.container div :hover {
+  background: gray;
+}
+
+/*hover over each column*/
+/* .container div:hover {
+  background: pink;
+} */
+
+h1 {
+    text-align: center;
+}
+.heading {
+    margin-bottom: 20px;
+}
+.input-form {
+    display:flex;
+    justify-content: center;
+    border: none;
+    margin: 30px;
 }
