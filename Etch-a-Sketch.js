@@ -49,29 +49,10 @@ function createGrid() {
       newDiv.appendChild(newDiv2);
     }
   }
-}
+};
 
 createGrid();
 
-
-
-// allDiv.addEventListener("mouseover", () => {
-//   allDiv.style.background  = "pink";   // when mouse enters
-// });
-
-// const allDiv = document.querySelectorAll(".container");
-
-// allDiv.forEach(div => {
-//   // When mouse enters
-//   div.addEventListener("mouseover", () => {
-//     div.style.background = "pink";
-//   });
-
-//   // When mouse leaves
-//   div.addEventListener("mouseout", () => {
-//     div.style.background = ""; // reset to default
-//   });
-// });
 
 const submit = document.querySelector(".submit-button");
 submit.addEventListener()
