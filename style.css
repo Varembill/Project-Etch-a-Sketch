@@ -5,17 +5,19 @@
     font-family:Arial, Helvetica, sans-serif;
     justify-content: center;
     gap: 1em;
+    
     /* flex-wrap:wrap; */
     
 }
 div {
    border: 1px solid black;
-   
+   cursor: pointer;
+   transition: background 0.5s ease;
 }
 
-.container div :hover {
+/* .container div :hover {
   background: gray;
-}
+} */
 
 /*hover over each column*/
 /* .container div:hover {
@@ -33,4 +35,8 @@ h1 {
     justify-content: center;
     border: none;
     margin: 30px;
+    gap: 5px;
+}
+.submit-button {
+    cursor:pointer;
 }
