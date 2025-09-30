@@ -33,16 +33,10 @@ const submit = document.querySelector(".submit-button");
 checkInputData ();
 
 function checkInputData () {
+  row.addEventListener('input',() => {}
+   )
 
-  if(row.value == ""){
-    checkInput.textContent = "input row value";
-  } else if (col.value == "") {
-    checkInput.textContent = "input row value";
-  } else if (row.value == "" && col.value == "" ) {
-    checkInput.textContent = "input column and rowvalue";
-  }
 }
-
 
 
 // submit.addEventListener("click", () => {
