@@ -1,18 +1,19 @@
 .container {
-    display:flex; 
-    margin:2px;
-    border:3px solid black ;
-    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    margin: 2px;
+    /* border: 3px solid black; */
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
     gap: 1em;
-    
-    /* flex-wrap:wrap; */
-    
+
+    flex-wrap: wrap;
+
 }
+
 div {
-   border: 1px solid black;
-   cursor: pointer;
-   transition: background 0.5s ease;
+    /* border: 1px solid black; */
+    cursor: pointer;
+    transition: background 0.5s ease;
 }
 
 /* .container div :hover {
@@ -27,19 +28,24 @@ div {
 h1 {
     text-align: center;
 }
+
 .heading {
     margin-bottom: 20px;
 }
+
 .input-form {
-    display:flex;
+    display: flex;
     justify-content: center;
     border: none;
     margin: 30px;
     gap: 5px;
 }
+
 .submit-button {
-    cursor:pointer;
+    cursor: pointer;
 }
-div .container {
-    background:yellow;
+.check-input {
+    border: none;
+    text-align:center;
+    color:red
 }
