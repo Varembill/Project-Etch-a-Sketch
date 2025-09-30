@@ -27,7 +27,7 @@
 
 const container = document.querySelector('.container');
 
-function createGrid() {
+function createGrid(i,x) {
   //create column first then add row to a child div to each column
   for (let i = 1; i < 17; i++) {
     const newDiv = document.createElement("div");

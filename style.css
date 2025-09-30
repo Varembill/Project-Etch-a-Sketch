@@ -40,6 +40,6 @@ h1 {
 .submit-button {
     cursor:pointer;
 }
-div.container {
+div .container {
     background:yellow;
 }
