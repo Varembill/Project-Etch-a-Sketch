@@ -1,7 +1,4 @@
 
-
-
-
 // function createGrid() {
 
 //     for (let i = 0; i < 16 ; i++) {
@@ -25,28 +22,38 @@
 // }
 
 
-
+// Variables declaration
 const row = document.getElementById("input-row");
 const col = document.getElementById("input-col");
 const checkInput = document.querySelector(".check-input");
 const submit = document.querySelector(".submit-button");
+const container = document.querySelector('.container');
+
+// call function
+ 
 checkInputData ();
 
 function checkInputData () {
-  row.addEventListener('input',() => {}
-   )
 
-}
+  submit.addEventListener('click', () => {
+    if(col.value !== "" && row.value !== "") {
+      checkInput.textContent = "Grid created";
+      createGrid(col.value, row.value); 
+    } else if (col.value ==="" && row.value ==="") {
+      checkInput.textContent = "Enter row and col";
+    } else if (col.value !== "") {
+      checkInput.textContent = "Enter row";
+    } else {
+      checkInput.textContent = "Enter col";
+    }
+    }
+  )
+
+  }
 
 
-// submit.addEventListener("click", () => {
-//   if( )
-//   createGrid(, );
-
-// })
 
 
-const container = document.querySelector('.container');
 
 function createGrid(col, row) {
   //create column first then add row to a child div to each column
