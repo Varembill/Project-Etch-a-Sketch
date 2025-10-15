@@ -30,56 +30,76 @@ const submit = document.querySelector(".submit-button");
 const container = document.querySelector('.container');
 const reset = document.querySelector('.reset-button');
 
-reset.addEventListener('click', () => {
-  container.textContent ="";
-})
-// call function
- 
-checkInputData ();
+function resetGrid() {
+  reset.addEventListener('click', () => {
+    container.textContent = "";
+  })
+};
 
-function checkInputData () {
+
+resetGrid();
+checkInputData();
+
+
+
+
+// function to check data input 
+
+function checkInputData() {
 
   submit.addEventListener('click', () => {
-    if(col.value !== "" && row.value !== "") {
-      checkInput.textContent = "Grid created";
-      createGrid(col.value, row.value); 
-    } else if (col.value ==="" && row.value ==="") {
+    if (col.value !== "" && row.value !== "") {
+      if (col.value <= 100 && row.value <= 100) {
+        checkInput.textContent = "Grid created";
+        createGrid(col.value, row.value);
+      } else {
+        checkInput.textContent = "Enter value less than or equal to 100"
+      };
+
+    } else if (col.value === "" && row.value === "") {
       checkInput.textContent = "Enter row and col";
     } else if (col.value !== "") {
       checkInput.textContent = "Enter row";
     } else {
       checkInput.textContent = "Enter col";
     }
-    }
+
+
+  }
   )
 
-  }
+}
 
-
-
-
-
+// function create a sketchPad 
 function createGrid(col, row) {
-  //create column first then add row to a child div to each column
-  for (let i = 1; i <= col; i++) {
-    const newDiv = document.createElement("div");
-    newDiv.textContent = "Header " + i;
-    newDiv.id = "div-" + i;
-    container.appendChild(newDiv);
 
-    // now add 16 children to *this* div
-    for (let x = 1; x <= row; x++) {
-      const newDiv2 = document.createElement("div");
-      newDiv2.textContent = "row " + x;
-      newDiv2.addEventListener("mouseover", () => {
-        newDiv2.style.background = "#03B037";
-      });
-      newDiv2.addEventListener("mouseout", () => {
-        setTimeout(() => { newDiv2.style.background = "#7CB003"; }, 100);
-        setTimeout(() => { newDiv2.style.background = ""; }, 150);
-      })
-      newDiv.appendChild(newDiv2);
+  if (container.textContent === "") {
+
+    //create column first then add row to a child div to each column
+    for (let i = 1; i <= col; i++) {
+      const newDiv = document.createElement("div");
+      newDiv.textContent = "Header " + i;
+      newDiv.id = "div-" + i;
+      container.appendChild(newDiv);
+
+      // now add 16 children to *this* div
+      for (let x = 1; x <= row; x++) {
+        const newDiv2 = document.createElement("div");
+        newDiv2.textContent = "row " + x;
+        newDiv2.addEventListener("mouseover", () => {
+          newDiv2.style.background = "#03B037";
+        });
+
+        newDiv2.addEventListener("mouseout", () => {
+          // setTimeout(() => { newDiv2.style.background = "#7CB003"; }, 100);
+          // setTimeout(() => { newDiv2.style.background = ""; }, 150);
+        })
+        newDiv.appendChild(newDiv2);
+      }
     }
   }
+
+
+
 };
 
